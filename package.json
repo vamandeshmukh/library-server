@@ -1,0 +1,39 @@
+{
+  "name": "redux-book-store",
+  "version": "1.0.0",
+  "description": "MERN Full-Stack Book Library Project",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [
+    "MERN",
+    "MongoDB",
+    "Express",
+    "React",
+    "Redux",
+    "Node"
+  ],
+  "author": "Paul Rail and Kyle Lemon",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.10.8",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.7.0",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
